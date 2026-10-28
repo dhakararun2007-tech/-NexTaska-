@@ -1,0 +1,142 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | NexTaska</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="topbar">
+        <a href="index.html" class="logo">
+            <span class="logo-icon">N</span>
+            NexTaska<span class="dot">.</span>
+        </a>
+
+        <div class="topbar-right">
+            <span class="welcome-user">Student Workspace</span>
+            <div class="avatar">A</div>
+        </div>
+    </header>
+
+    <div class="app-layout">
+        <aside class="sidebar">
+            <span class="sidebar-label">WORKSPACE</span>
+
+            <a href="dashboard.html" class="side-link active">
+                <span>▦</span> Dashboard
+            </a>
+            <a href="tasks.html" class="side-link">
+                <span>✓</span> My Tasks
+            </a>
+            <a href="notes.html" class="side-link">
+                <span>✎</span> Notes & Ideas
+            </a>
+
+            <div class="sidebar-bottom">
+                <div class="sidebar-tip">
+                    <span class="tip-icon">✦</span>
+                    <h4>Stay focused</h4>
+                    <p>One task at a time. Small progress is still progress.</p>
+                </div>
+                <a href="index.html" class="side-link">← Home page</a>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <div class="page-heading">
+                <div>
+                    <span class="eyebrow">YOUR PRODUCTIVITY SPACE</span>
+                    <h1>Welcome back, <span class="gradient-text">Student!</span></h1>
+                    <p class="muted-text">Here's an overview of your day.</p>
+                </div>
+                <a href="tasks.html" class="btn">+ View Tasks</a>
+            </div>
+
+            <section class="stats-grid">
+                <article class="stat-card">
+                    <div class="stat-top">
+                        <span>Total Tasks</span>
+                        <span class="stat-icon purple-icon">▦</span>
+                    </div>
+                    <h2 data-dashboard-stat="all" data-placeholder="true">0</h2>
+                    <p class="muted-text">Tasks in your workspace</p>
+                </article>
+
+                <article class="stat-card">
+                    <div class="stat-top">
+                        <span>Pending</span>
+                        <span class="stat-icon pink-icon">◷</span>
+                    </div>
+                    <h2 data-dashboard-stat="pending" data-placeholder="true">0</h2>
+                    <p class="muted-text">Still to be completed</p>
+                </article>
+
+                <article class="stat-card">
+                    <div class="stat-top">
+                        <span>Completed</span>
+                        <span class="stat-icon cyan-icon">✓</span>
+                    </div>
+                    <h2 data-dashboard-stat="completed" data-placeholder="true">0</h2>
+                    <p class="muted-text">Tasks finished so far</p>
+                </article>
+            </section>
+
+            <section class="content-card progress-card">
+                <div class="card-heading">
+                    <div>
+                        <span class="eyebrow">KEEP GOING</span>
+                        <h3>Your daily progress</h3>
+                    </div>
+                    <strong class="gradient-text" data-progress-label>0%</strong>
+                </div>
+
+                <div class="progress-track">
+                    <div class="progress-fill" data-progress-fill style="width:0%"></div>
+                </div>
+                <p class="muted-text"><span data-progress-copy>0 tasks completed.</span></p>
+            </section>
+
+            <section class="content-card">
+                <div class="card-heading">
+                    <div>
+                        <h3>Today's Tasks</h3>
+                        <p class="muted-text">A quick look at what needs your attention.</p>
+                    </div>
+                    <a href="tasks.html" class="text-link">See all →</a>
+                </div>
+
+                <div id="dashboard-task-list" aria-live="polite"></div>
+            </section>
+
+            <section class="quick-actions">
+                <a href="tasks.html" class="action-card">
+                    <span class="feature-icon purple-icon">✓</span>
+                    <div>
+                        <h3>Manage Tasks</h3>
+                        <p>Open your task list</p>
+                    </div>
+                    <span class="action-arrow">↗</span>
+                </a>
+
+                <a href="index.html#features" class="action-card">
+                    <span class="feature-icon cyan-icon">✦</span>
+                    <div>
+                        <h3>Explore Features</h3>
+                        <p>See what NexTaska offers</p>
+                    </div>
+                    <span class="action-arrow">↗</span>
+                </a>
+            </section>
+
+            <p class="prototype-note">
+                Your workspace overview is based on tasks saved in this browser.
+            </p>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -19,4 +19,3 @@ Tasks and notes stay in the same browser profile on this device. Clearing browse
 - Create, search, filter, and delete notes.
 
 All pages share the `nextaska.workspace.v1` localStorage key in `script.js`.
-# -NexTaska-

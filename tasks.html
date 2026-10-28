@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Tasks | NexTaska</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="topbar">
+        <a href="index.html" class="logo">
+            <span class="logo-icon">N</span>
+            NexTaska<span class="dot">.</span>
+        </a>
+
+        <div class="topbar-right">
+            <span class="welcome-user">Student Workspace</span>
+            <div class="avatar">A</div>
+        </div>
+    </header>
+
+    <div class="app-layout">
+        <aside class="sidebar">
+            <span class="sidebar-label">WORKSPACE</span>
+
+            <a href="dashboard.html" class="side-link">
+                <span>▦</span> Dashboard
+            </a>
+            <a href="tasks.html" class="side-link active">
+                <span>✓</span> My Tasks
+            </a>
+            <a href="notes.html" class="side-link">
+                <span>✎</span> Notes & Ideas
+            </a>
+
+            <div class="sidebar-bottom">
+                <div class="sidebar-tip">
+                    <span class="tip-icon">✦</span>
+                    <h4>One step at a time</h4>
+                    <p>Prioritize what matters and keep moving forward.</p>
+                </div>
+                <a href="index.html" class="side-link">← Home page</a>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <div class="page-heading">
+                <div>
+                    <span class="eyebrow">PLAN · ORGANIZE · COMPLETE</span>
+                    <h1>My <span class="gradient-text">Tasks</span></h1>
+                    <p class="muted-text">Keep track of your work in one place.</p>
+                </div>
+                <a href="#task-list" class="btn">+ New Task</a>
+            </div>
+
+            <section class="stats-grid task-stats">
+                <article class="stat-card">
+                    <div class="stat-top">
+                        <span>All Tasks</span>
+                        <span class="stat-icon purple-icon">▦</span>
+                    </div>
+                    <h2 data-task-stat="all">0</h2>
+                    <p class="muted-text">Tasks in your workspace</p>
+                </article>
+
+                <article class="stat-card">
+                    <div class="stat-top">
+                        <span>Pending</span>
+                        <span class="stat-icon pink-icon">◷</span>
+                    </div>
+                    <h2 data-task-stat="pending">0</h2>
+                    <p class="muted-text">Waiting to be done</p>
+                </article>
+
+                <article class="stat-card">
+                    <div class="stat-top">
+                        <span>Completed</span>
+                        <span class="stat-icon cyan-icon">✓</span>
+                    </div>
+                    <h2 data-task-stat="completed">0</h2>
+                    <p class="muted-text">Already finished</p>
+                </article>
+            </section>
+
+            <section class="content-card" id="task-list">
+                <div class="card-heading">
+                    <div>
+                        <h3>All Tasks</h3>
+                        <p class="muted-text">Tasks saved in your workspace</p>
+                    </div>
+                    <a href="add-task.html" class="btn btn-small">+ Add Task</a>
+                </div>
+
+                <div class="filter-bar">
+                    <button class="filter-btn selected" type="button" data-task-filter="all">All</button>
+                    <button class="filter-btn" type="button" data-task-filter="pending">Pending</button>
+                    <button class="filter-btn" type="button" data-task-filter="completed">Completed</button>
+                    <button class="filter-btn" type="button" data-task-filter="high">High Priority</button>
+                </div>
+
+                <div id="task-list-items" aria-live="polite"></div>
+            </section>
+
+            <p class="prototype-note">
+                Your tasks are saved in this browser.
+            </p>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

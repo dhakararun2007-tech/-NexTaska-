@@ -1,0 +1,211 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Task | NexTaska</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Top Navigation -->
+    <header class="topbar">
+        <a href="index.html" class="logo">
+            <span class="logo-icon">N</span>
+            NexTaska<span class="dot">.</span>
+        </a>
+
+        <div class="topbar-right">
+            <span class="welcome-user">Student Workspace</span>
+            <div class="avatar">A</div>
+        </div>
+    </header>
+
+    <div class="app-layout">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <span class="sidebar-label">WORKSPACE</span>
+
+            <a href="dashboard.html" class="side-link">
+                <span>▦</span> Dashboard
+            </a>
+
+            <a href="tasks.html" class="side-link active">
+                <span>✓</span> My Tasks
+            </a>
+
+            <a href="index.html#features" class="side-link">
+                <span>✎</span> Notes & Ideas
+            </a>
+
+            <div class="sidebar-bottom">
+                <div class="sidebar-tip">
+                    <span class="tip-icon">✦</span>
+                    <h4>Stay focused</h4>
+                    <p>Plan your next step and make progress every day.</p>
+                </div>
+
+                <a href="index.html" class="side-link">← Home page</a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+
+            <div class="page-heading">
+                <div>
+                    <span class="eyebrow">PLAN YOUR NEXT STEP</span>
+                    <h1>Create a <span class="gradient-text">New Task.</span></h1>
+                    <p class="muted-text">
+                        Add the details of the task you want to complete.
+                    </p>
+                </div>
+
+                <a href="tasks.html" class="btn btn-outline">
+                    ← Back to Tasks
+                </a>
+            </div>
+
+            <div class="add-task-layout">
+
+                <!-- Task Form -->
+                <section class="content-card add-task-card">
+
+                    <div class="card-heading">
+                        <div>
+                            <h3>Task Details</h3>
+                            <p class="muted-text">
+                                Give your task a clear title and plan.
+                            </p>
+                        </div>
+
+                        <span class="feature-icon purple-icon">✎</span>
+                    </div>
+
+                    <form class="task-form" id="task-form">
+
+                        <div class="form-group">
+                            <label for="title">Task Title *</label>
+                            <input
+                                type="text"
+                                id="title"
+                                name="title"
+                                placeholder="e.g. Complete Web Technology journal"
+                                required
+                            >
+                            <small>Keep your task title short and clear.</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="description">Description</label>
+                            <textarea
+                                id="description"
+                                name="description"
+                                rows="4"
+                                placeholder="Write some details about this task..."
+                            ></textarea>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="due-date">Due Date *</label>
+                                <input
+                                    type="date"
+                                    id="due-date"
+                                    name="due-date"
+                                    required
+                                >
+                            </div>
+
+                            <div class="form-group">
+                                <label for="priority">Priority</label>
+                                <select id="priority" name="priority">
+                                    <option value="low">Low</option>
+                                    <option value="medium" selected>Medium</option>
+                                    <option value="high">High</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="category">Category</label>
+                            <select id="category" name="category">
+                                <option value="study">Study</option>
+                                <option value="project">College Project</option>
+                                <option value="personal">Personal</option>
+                                <option value="work">Work</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="reminder">Reminder (Optional)</label>
+                            <input
+                                type="datetime-local"
+                                id="reminder"
+                                name="reminder"
+                            >
+                            <small>Choose when you would like to be reminded.</small>
+                        </div>
+
+                        <div class="form-buttons">
+                            <a href="tasks.html" class="btn btn-outline">
+                                Cancel
+                            </a>
+
+                            <button type="submit" class="btn">
+                                + Create Task
+                            </button>
+                        </div>
+
+                    </form>
+                </section>
+
+                <!-- Right Side Information -->
+                <aside class="task-side-panel">
+
+                    <section class="content-card tip-card">
+                        <span class="feature-icon cyan-icon">✦</span>
+                        <h3>Make it manageable</h3>
+                        <p class="muted-text">
+                            Break a large goal into smaller tasks.
+                            Clear tasks are easier to start and finish.
+                        </p>
+                    </section>
+
+                    <section class="content-card">
+                        <span class="eyebrow">QUICK CHECKLIST</span>
+                        <h3>Before you start</h3>
+
+                        <div class="checklist-item">
+                            <span>01</span>
+                            <p>Write a clear task title.</p>
+                        </div>
+
+                        <div class="checklist-item">
+                            <span>02</span>
+                            <p>Set a realistic due date.</p>
+                        </div>
+
+                        <div class="checklist-item">
+                            <span>03</span>
+                            <p>Choose a suitable priority.</p>
+                        </div>
+                    </section>
+
+                </aside>
+
+            </div>
+
+            <p class="prototype-note">
+                NexTaska · Frontend UI Prototype
+            </p>
+
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

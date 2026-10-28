@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes & Ideas | NexTaska</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body{
+            margin: 0;
+        padding: 0;
+        }
+        
+    </style>
+</head>
+
+<body class="app-page">
+
+    <!-- Top Navigation -->
+    <header class="app-topbar">
+        <a href="index.html" class="logo">
+            <span class="logo-icon">N</span>
+            <span>NexTaska<span class="dot">.</span></span>
+        </a>
+
+        <div class="topbar-right">
+            <span class="workspace-label">Student Workspace</span>
+            <div class="avatar">S</div>
+        </div>
+    </header>
+
+    <div class="app-layout">
+        <aside class="sidebar">
+            <span class="sidebar-label">WORKSPACE</span>
+            <a href="dashboard.html" class="side-link"><span>▦</span> Dashboard</a>
+            <a href="tasks.html" class="side-link"><span>✓</span> My Tasks</a>
+            <a href="notes.html" class="side-link active"><span>✎</span> Notes & Ideas</a>
+            <div class="sidebar-bottom">
+                <div class="sidebar-tip"><span class="tip-icon">✦</span><h4>Stay Inspired</h4><p>Capture your ideas before they disappear.</p></div>
+                <a href="index.html" class="side-link">← Home page</a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="app-main notes-main">
+
+            <div class="page-heading notes-heading">
+                <div>
+                    <p class="eyebrow">YOUR PERSONAL SPACE</p>
+                    <h1>Notes <span class="gradient-text">& Ideas.</span></h1>
+                    <p class="muted-text">
+                        Your thoughts, plans and brilliant ideas — all in one place.
+                    </p>
+                </div>
+
+                <a href="#create-note" class="btn">
+                    + Create Note
+                </a>
+            </div>
+
+            <!-- Search Bar -->
+            <section class="notes-search">
+                <span class="search-symbol">⌕</span>
+                <input
+                    type="search"
+                    placeholder="Search your notes and ideas..."
+                    aria-label="Search notes"
+                >
+                <span class="search-shortcut">NOTES</span>
+            </section>
+
+            <!-- Category Filters: Visual Only -->
+            <section class="notes-toolbar">
+                <div class="notes-categories">
+                    <button class="note-category selected" type="button">
+                        All Notes
+                    </button>
+
+                    <button class="note-category" type="button">
+                        Study
+                    </button>
+
+                    <button class="note-category" type="button">
+                        Ideas
+                    </button>
+
+                    <button class="note-category" type="button">
+                        Personal
+                    </button>
+                </div>
+
+                <span class="notes-count" data-notes-count>0 notes</span>
+            </section>
+
+            <!-- Notes Grid -->
+            <section class="notes-grid" id="notes-grid" aria-live="polite"></section>
+
+            <!-- Create Note Form -->
+            <section class="create-note-section" id="create-note">
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow">CAPTURE YOUR THOUGHTS</p>
+                        <h2>Create a <span class="gradient-text">New Note.</span></h2>
+                    </div>
+                </div>
+
+                <div class="create-note-card">
+                    <form class="note-form" id="note-form">
+
+                        <div class="form-group">
+                            <label for="note-title">Note Title</label>
+                            <input
+                                type="text"
+                                id="note-title"
+                                required
+                                placeholder="Give your note a title..."
+                            >
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="note-category">Category</label>
+                                <select id="note-category">
+                                    <option>Study</option>
+                                    <option>Ideas</option>
+                                    <option>Personal</option>
+                                    <option>Quick Note</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="note-color">Note Color</label>
+                                <select id="note-color">
+                                    <option>Purple</option>
+                                    <option>Pink</option>
+                                    <option>Cyan</option>
+                                    <option>Yellow</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="note-content">Your Note</label>
+                            <textarea
+                                id="note-content"
+                                required
+                                placeholder="Write your thoughts, plans or ideas here..."
+                                rows="6"
+                            ></textarea>
+                        </div>
+
+                        <div class="form-buttons">
+                            <button class="btn btn-outline" type="reset">
+                                Clear
+                            </button>
+
+                            <button class="btn" type="submit">
+                                Save Note
+                            </button>
+                        </div>
+
+                    </form>
+                </div>
+            </section>
+
+            <footer class="notes-footer">
+                <p>Made for your next big idea. <span>✦</span> NexTaska</p>
+            </footer>
+
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
