@@ -61,7 +61,7 @@
                         <span>All Tasks</span>
                         <span class="stat-icon purple-icon">▦</span>
                     </div>
-                    <h2 data-task-stat="all">0</h2>
+                    <h2 id="all-task-count">0</h2>
                     <p class="muted-text">Tasks in your workspace</p>
                 </article>
 
@@ -70,7 +70,7 @@
                         <span>Pending</span>
                         <span class="stat-icon pink-icon">◷</span>
                     </div>
-                    <h2 data-task-stat="pending">0</h2>
+                    <h2 id="pending-task-count">0</h2>
                     <p class="muted-text">Waiting to be done</p>
                 </article>
 
@@ -79,7 +79,7 @@
                         <span>Completed</span>
                         <span class="stat-icon cyan-icon">✓</span>
                     </div>
-                    <h2 data-task-stat="completed">0</h2>
+                    <h2 id="completed-task-count">0</h2>
                     <p class="muted-text">Already finished</p>
                 </article>
             </section>
@@ -88,27 +88,52 @@
                 <div class="card-heading">
                     <div>
                         <h3>All Tasks</h3>
-                        <p class="muted-text">Tasks saved in your workspace</p>
+                        <p class="muted-text">Your task list</p>
                     </div>
-                    <a href="add-task.html" class="btn btn-small">+ Add Task</a>
+                    <span class="badge badge-high" id="task-list-count">0 tasks</span>
                 </div>
 
                 <div class="filter-bar">
-                    <button class="filter-btn selected" type="button" data-task-filter="all">All</button>
-                    <button class="filter-btn" type="button" data-task-filter="pending">Pending</button>
-                    <button class="filter-btn" type="button" data-task-filter="completed">Completed</button>
-                    <button class="filter-btn" type="button" data-task-filter="high">High Priority</button>
+                    <button class="filter-btn selected" type="button" data-filter="all">All</button>
+                    <button class="filter-btn" type="button" data-filter="pending">Pending</button>
+                    <button class="filter-btn" type="button" data-filter="completed">Completed</button>
+                    <button class="filter-btn" type="button" data-filter="high">High Priority</button>
                 </div>
 
-                <div id="task-list-items" aria-live="polite"></div>
+                <div id="tasks-container" aria-live="polite"></div>
+            </section>
+
+            <section class="content-card task-form-preview">
+                <span class="eyebrow">ADD TO YOUR LIST</span>
+                <h3>Have something new to do?</h3>
+                <p class="muted-text">
+                    Add a task and keep it saved in your workspace.
+                </p>
+
+                <form class="demo-form" id="task-form">
+                    <label for="task-title">Task title</label>
+                    <input id="task-title" name="title" type="text"
+                           placeholder="e.g. Complete HTML assignment" required>
+
+                    <label for="task-priority">Priority</label>
+                    <select id="task-priority" name="priority" required>
+                        <option value="">Choose priority</option>
+                        <option value="High">High</option>
+                        <option value="Medium">Medium</option>
+                        <option value="Low">Low</option>
+                    </select>
+
+                    <button class="btn" type="submit">Create Task</button>
+                </form>
             </section>
 
             <p class="prototype-note">
-                Your tasks are saved in this browser.
+                Tasks are saved automatically in this browser.
             </p>
         </main>
     </div>
 
-    <script src="script.js"></script>
+    <script src="js/tasks.js"></script>
+    <script src="js/auth-shell.js"></script>
 </body>
 </html>
