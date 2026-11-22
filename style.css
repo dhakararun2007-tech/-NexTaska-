@@ -20,11 +20,12 @@
 }
 
 :root {
+    
     --color-primary: #5BC0DE;
     --color-primary-glow:rgba(91, 192, 222, 0.24);
     --color-secondary:#D97706;
     --color-secondary-glow: rgba(217, 119, 6, 0.20);
-    --color-accent: #5BC0DE;
+    --color-accent: #F4D6B0;
 
     --color-bg-base: #0B132B;
     --color-bg-section: #1C2541;

@@ -61,7 +61,7 @@
                         <span>Total Tasks</span>
                         <span class="stat-icon purple-icon">▦</span>
                     </div>
-                    <h2 data-dashboard-stat="all" data-placeholder="true">0</h2>
+                    <h2 id="dashboard-total">0</h2>
                     <p class="muted-text">Tasks in your workspace</p>
                 </article>
 
@@ -70,7 +70,7 @@
                         <span>Pending</span>
                         <span class="stat-icon pink-icon">◷</span>
                     </div>
-                    <h2 data-dashboard-stat="pending" data-placeholder="true">0</h2>
+                    <h2 id="dashboard-pending">0</h2>
                     <p class="muted-text">Still to be completed</p>
                 </article>
 
@@ -79,7 +79,7 @@
                         <span>Completed</span>
                         <span class="stat-icon cyan-icon">✓</span>
                     </div>
-                    <h2 data-dashboard-stat="completed" data-placeholder="true">0</h2>
+                    <h2 id="dashboard-completed">0</h2>
                     <p class="muted-text">Tasks finished so far</p>
                 </article>
             </section>
@@ -90,11 +90,11 @@
                         <span class="eyebrow">KEEP GOING</span>
                         <h3>Your daily progress</h3>
                     </div>
-                    <strong class="gradient-text" data-progress-label>0%</strong>
+                    <strong class="gradient-text" id="dashboard-progress-label">0%</strong>
                 </div>
 
                 <div class="progress-track">
-                    <div class="progress-fill" data-progress-fill style="width:0%"></div>
+                    <div class="progress-fill" id="dashboard-progress-fill" style="width:0%"></div>
                 </div>
                 <p class="muted-text"><span data-progress-copy>0 tasks completed.</span></p>
             </section>
