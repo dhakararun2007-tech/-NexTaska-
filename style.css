@@ -1738,3 +1738,39 @@ input:focus, select:focus, textarea:focus {
   .auth-story { min-height:240px; }
   .auth-story h1 { margin:22px 0 10px; }
 }
+
+
+/* =========================
+   TASK / NOTE DETAILS MODALS
+========================= */
+.nt-task-clickable { cursor: pointer; border-radius: 10px; padding-left: 10px; padding-right: 10px; transition: background .18s ease; }
+.nt-task-clickable:hover { background: rgba(255,255,255,.035); }
+.nt-task-clickable:focus-visible, .nt-note-clickable:focus-visible { outline: 2px solid var(--color-primary); outline-offset: 3px; }
+.nt-task-preview { display: block; max-width: 560px; overflow: hidden; color: var(--color-text-muted); font-size: .78rem; text-overflow: ellipsis; white-space: nowrap; }
+.nt-note-clickable { cursor: pointer; transition: transform .18s ease, border-color .18s ease; }
+.nt-note-clickable:hover { transform: translateY(-3px); border-color: var(--color-primary); }
+.nt-note-preview { display: -webkit-box; overflow: hidden; -webkit-box-orient: vertical; -webkit-line-clamp: 4; }
+.nt-modal { display: none; position: fixed; inset: 0; z-index: 1000; align-items: center; justify-content: center; padding: 22px; }
+.nt-modal.is-open { display: flex; }
+.nt-modal-backdrop { position: absolute; inset: 0; background: rgba(2,6,18,.78); backdrop-filter: blur(7px); }
+.nt-modal-panel { position: relative; z-index: 1; width: min(100%, 680px); max-height: min(88vh, 850px); overflow-y: auto; padding: 32px; border: 1px solid var(--color-border); border-radius: 20px; background: var(--color-bg-section); box-shadow: var(--shadow-lg); }
+.nt-modal-panel h2 { margin: 4px 42px 20px 0; overflow-wrap: anywhere; font-size: clamp(1.45rem, 4vw, 2rem); }
+.nt-modal-close { position: absolute; top: 18px; right: 20px; display: grid; width: 38px; height: 38px; place-items: center; border: 1px solid var(--color-border); border-radius: 10px; background: var(--color-surface); color: var(--white); font-size: 1.5rem; }
+.nt-task-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-bottom: 22px; color: var(--color-text-muted); font-size: .82rem; }
+.nt-description-heading { margin-bottom: 10px; }
+.nt-full-description { min-height: 90px; padding: 18px; border: 1px solid var(--color-border); border-radius: 12px; background: rgba(0,0,0,.12); color: var(--color-text-body); line-height: 1.8; white-space: pre-wrap; overflow-wrap: anywhere; }
+.nt-note-full { min-height: 130px; }
+.nt-modal-actions { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 10px; margin-top: 22px; }
+.nt-edit-form { display: grid; gap: 10px; }
+.nt-edit-form label { margin-top: 6px; color: var(--color-text-body); font-size: .82rem; font-weight: 600; }
+.nt-edit-form input, .nt-edit-form select, .nt-edit-form textarea { width: 100%; min-height: 44px; padding: 11px 13px; border: 1px solid var(--color-border); border-radius: 9px; outline: none; background: var(--color-bg-base); color: var(--color-text-body); font: inherit; }
+.nt-edit-form textarea { resize: vertical; }
+.nt-edit-form input:focus, .nt-edit-form select:focus, .nt-edit-form textarea:focus { border-color: var(--color-primary); }
+.nt-edit-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 12px; margin-top: 4px; }
+@media (max-width: 600px) {
+  .nt-modal { padding: 10px; }
+  .nt-modal-panel { padding: 24px 18px; }
+  .nt-edit-grid { grid-template-columns: 1fr; }
+  .nt-task-clickable { flex-wrap: wrap; }
+  .nt-task-preview { max-width: 100%; }
+}
